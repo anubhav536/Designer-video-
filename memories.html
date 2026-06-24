@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Beautiful Memories</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="memories.css">
+
+</head>
+
+<body>
+
+<!-- Floating Hearts -->
+
+<div class="floating-heart">❤</div>
+<div class="floating-heart">❤</div>
+<div class="floating-heart">❤</div>
+<div class="floating-heart">❤</div>
+<div class="floating-heart">❤</div>
+<div class="floating-heart">❤</div>
+
+<div class="container">
+
+<h1 class="title">
+Beautiful Memories ✨
+</h1>
+
+<p class="subtitle">
+  These moments are not beautiful because they are perfect... ✨
+They are beautiful because every single moment I spend with you becomes special to me 🥹💙
+It’s never about the place, the pictures, or how perfect everything looks...
+it’s about you being there ❤️
+The time I spend with you gives me memories that I know I’ll keep close to my heart forever 💫
+And honestly... I wish to keep making memories like these with you until the very last moment of my life 🌸🫶
+No matter how much time passes, I hope we always stay like this — laughing together, irritating each other, making random memories, and being there for one another 🤍✨
+Happy Birthday, ladlee 🎂💖
+You are truly one of the most special people in my life 🥹🌍
+</p>
+
+<!-- Gallery -->
+
+<div class="gallery">
+
+<!-- Memory 1 -->
+
+<div class="memory-card"
+onclick="openMemory('photo1.jpg','cute sa baccha 🥺❤️')">
+
+<img src="photo1.jpg">
+
+<div class="overlay">
+
+<h2>Memory 01</h2>
+
+<p>cute sa baccha 🥺❤️</p>
+
+</div>
+
+</div>
+
+<!-- Memory 2 -->
+
+<div class="memory-card"
+onclick="openMemory('photo2.jpg','1st one ✨')">
+
+<img src="photo2.jpg">
+
+<div class="overlay">
+
+<h2>Memory 02</h2>
+
+<p>1st one ✨</p>
+
+</div>
+
+</div>
+
+<!-- Memory 3 -->
+
+<div class="memory-card"
+onclick="openMemory('photo3.jpg','Moments that still feel magical 🌸')">
+
+<img src="photo3.jpg">
+
+<div class="overlay">
+
+<h2>Memory 03</h2>
+
+<p>Magical memories 💫</p>
+
+</div>
+
+</div>
+
+<!-- Memory 4 -->
+
+<div class="memory-card"
+onclick="openMemory('photo4.jpg','videocall wali bakchodi 😂✨')">
+
+<img src="photo4.jpg">
+
+<div class="overlay">
+
+<h2>Memory 04</h2>
+
+<p>videocall wali bakchodi 😂✨</p>
+
+</div>
+
+</div>
+
+<!-- Memory 5 -->
+
+<div class="memory-card"
+onclick="openMemory('photo5.jpg','Little moments, big memories 🤍')">
+
+<img src="photo5.jpg">
+
+<div class="overlay">
+
+<h2>Memory 05</h2>
+
+<p>Little moments 💖</p>
+
+</div>
+
+</div>
+
+<!-- Memory 6 -->
+
+<div class="memory-card"
+onclick="openMemory('photo6.jpg','memories that never fades away 🌙')">
+
+<img src="photo6.jpg">
+
+<div class="overlay">
+
+<h2>Memory 06</h2>
+
+<p>never fades away 🌙</p>
+
+</div>
+
+</div>
+
+<!-- Memory 7 -->
+
+<div class="memory-card"
+onclick="openMemory('photo7.jpg','Beautiful times together 💕')">
+
+<img src="photo7.jpg">
+
+<div class="overlay">
+
+<h2>Memory 07</h2>
+
+<p>Beautiful times 💕</p>
+
+</div>
+
+</div>
+
+<!-- Memory 8 -->
+
+<div class="memory-card"
+onclick="openMemory('photo8.jpg','cutest childhood memory ✨')">
+
+<img src="photo8.jpg">
+
+<div class="overlay">
+
+<h2>Memory 08</h2>
+
+<p>cutest memory ✨</p>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Popup -->
+
+<div class="popup" id="popup">
+
+<span class="close"
+onclick="closeMemory()">×</span>
+
+<img id="popup-img">
+
+<p id="popup-text"></p>
+
+</div>
+
+<!-- Back Button -->
+
+<a href="index.html" class="btn">
+
+← Back Home
+
+</a>
+
+</div>
+
+<script>
+
+function openMemory(image,text){
+
+document.getElementById("popup").style.display="flex";
+
+document.getElementById("popup-img").src=image;
+
+document.getElementById("popup-text").innerHTML=text;
+
+}
+
+function closeMemory(){
+
+document.getElementById("popup").style.display="none";
+
+}
+
+</script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
