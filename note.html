@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Special Note</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="note.css">
+
+</head>
+
+<body>
+
+<!-- Floating Hearts -->
+
+<div class="floating-heart">❤</div>
+<div class="floating-heart">❤</div>
+<div class="floating-heart">❤</div>
+<div class="floating-heart">❤</div>
+<div class="floating-heart">❤</div>
+<div class="floating-heart">❤</div>
+
+<div class="container">
+
+<div class="letter">
+
+<h1 class="title">
+Special Note ✨
+</h1>
+
+<p id="typing-text"></p>
+
+<a href="index.html" class="btn">
+
+← Back Home
+
+</a>
+
+</div>
+
+</div>
+
+<script>
+
+const text = `
+
+Happy Birthday dear sungraa... 🎂❤️
+Pata hai... aap meri life me jab se aaye ho na, tab se genuinely sab kuch thoda better sa lagne laga hai ✨
+Aisa lagta hai jaise meri uljhi hui life ko kisi ne dheere se sambhal liya ho... aur wo insaan aap ho 💙
+Main koi bhi galti karu, koi bhi kand karu 😂  
+mujhe daantne se pehle samajhne wale, aur samjhane wale ek laute insaan ho aap 🤝🥹
+Aapke saath har ek moment alag hi feel deta hai...
+Chahe kitni bhi bakwaas baatein ho, random fights ho, ya bas normal si conversations... sab memories ban jaati hain 💫
+Aur sach kahu...
+Aap meri life me kitna matter karte ho na, ye cheez main kabhi properly words me explain hi nahi kar paungi ❤️
+Kabhi kabhi lagta hai ki bhagwan ne mujhe ek bhai nahi, ek safe place diya hai 🫶
+Aisa insaan jiske paas jaake bina kuch soche apni har baat bol sakti hu...
+chahe mood kitna bhi kharab ho, ek baar aapse baat ho jaaye na to sab thoda theek lagne lagta hai 🌸
+Aur honestly...
+Mujhe kabhi kabhi ye soch kar hi emotional feel hota hai ki meri life me aap jaisa bhai hai 🥹💙
+and I wish ki aap jaisa bhai kisi ko na mile...
+har janam me mere alawa 😌✨
+Main sach me bahut zyada blessed hu ki aap ek “suar” 🐷 ke roop me meri zindagi me aaye 😂💖
+Aur honestly, aap jaisa pyara aur pagal suar mushkil hi mile kahin 🤭
+Aapko shayad pata bhi nahi hoga, lekin aap meri life ke un logon me se ho jinse meri khushi genuinely judi hui hai 💫
+Aap dukhi hote ho to mujhe bhi achha nahi lagta...
+aur jab aap haste ho na, tab sach me sab light sa feel hota hai ☀️
+Thank you...
+har baar mere saath rehne ke liye,  
+mujhe handle karne ke liye,  
+meri bakwaas sunne ke liye,  
+meri overthinking tolerate karne ke liye 😂  aur bina bole bhi mujhe samajh jaane ke liye 💙
+Mujhe ye bhi pata hai ki future me hum dono kitne bhi busy ho jaayein, kitne bhi bade ho jaayein, kitni bhi responsibilities aa jaayein...
+lekin hamara bond kabhi change nahi hoga 🫂✨
+Kyunki kuch relationships blood se nahi, feelings se strong bante hain...
+aur mera aapse wala relation unhi me se ek hai ❤️
+Aap sirf mere bhai nahi ho...
+aap meri aadat ho 🌸  
+meri comfort ho 💙  
+meri favourite problem ho 😂  
+aur meri life ka bohot important part ho ✨
+Aur main dil se wish karti hu ki aapka ye 19th birthday aapki life ke sabse beautiful birthdays me se ek ho 🎉✨
+Aap hamesha haste raho, khush raho, aur jo bhi chaho wo sab aapko mile 🌍💫
+Kabhi bhi khud ko akela mat samajhna...
+kyunki ek pagal si behen hamesha aapke saath rahegi 🥹❤️
+Ab zyada nahi likhungi warna hawa me udne lagega ye suar 🐷😂
+phir usko pakadna mushkil ho jayega 🤣
+Or m bhi aab roo dungii 🤧😅
+Theek hai chall aab...
+once again Happiest birthday , sungraaaa...... ❤️🎂
+
+`;
+
+let i = 0;
+
+function typeWriter(){
+
+if(i < text.length){
+
+document.getElementById("typing-text").innerHTML += text.charAt(i);
+
+i++;
+
+setTimeout(typeWriter,25);
+
+}
+
+}
+
+typeWriter();
+
+</script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
