@@ -1,0 +1,295 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#0f0f14;
+overflow-x:hidden;
+color:white;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+position:relative;
+}
+
+/* ===== Animated Background ===== */
+
+body::before{
+content:"";
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+background:
+radial-gradient(circle at top left,#ff4d9d44,transparent 30%),
+radial-gradient(circle at bottom right,#7c4dff44,transparent 30%),
+radial-gradient(circle at center,#ffffff08,transparent 40%);
+z-index:-5;
+animation:bgMove 10s infinite alternate;
+}
+
+@keyframes bgMove{
+0%{
+transform:scale(1);
+}
+100%{
+transform:scale(1.08);
+}
+}
+
+/* ===== Blur Effects ===== */
+
+.blur{
+position:fixed;
+border-radius:50%;
+filter:blur(80px);
+opacity:.5;
+z-index:-4;
+animation:float 8s ease-in-out infinite alternate;
+}
+
+.blur1{
+width:220px;
+height:220px;
+background:#ff5ca8;
+top:-50px;
+left:-60px;
+}
+
+.blur2{
+width:250px;
+height:250px;
+background:#7c4dff;
+bottom:-80px;
+right:-80px;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0px);
+}
+100%{
+transform:translateY(30px);
+}
+}
+
+/* ===== Floating Hearts ===== */
+
+.hearts span{
+position:fixed;
+font-size:20px;
+opacity:.5;
+animation:hearts 8s linear infinite;
+}
+
+.hearts span:nth-child(1){
+left:10%;
+animation-delay:0s;
+}
+
+.hearts span:nth-child(2){
+left:30%;
+animation-delay:2s;
+}
+
+.hearts span:nth-child(3){
+left:50%;
+animation-delay:4s;
+}
+
+.hearts span:nth-child(4){
+left:70%;
+animation-delay:6s;
+}
+
+.hearts span:nth-child(5){
+left:90%;
+animation-delay:8s;
+}
+
+@keyframes hearts{
+0%{
+transform:translateY(100vh) scale(0);
+opacity:0;
+}
+20%{
+opacity:.6;
+}
+100%{
+transform:translateY(-10vh) scale(1.4);
+opacity:0;
+}
+}
+
+/* ===== Main Container ===== */
+
+.container{
+width:100%;
+max-width:450px;
+text-align:center;
+}
+
+/* ===== Title ===== */
+
+.title{
+font-family:'Great Vibes',cursive;
+font-size:60px;
+margin-bottom:10px;
+text-shadow:0 0 20px #ff7eb3;
+}
+
+.subtitle{
+font-size:15px;
+opacity:.8;
+margin-bottom:30px;
+line-height:1.7;
+}
+
+/* ===== Video Card ===== */
+
+.video-card{
+position:relative;
+border-radius:30px;
+overflow:hidden;
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,0.1);
+padding:10px;
+box-shadow:
+0 10px 25px rgba(0,0,0,0.3),
+0 0 30px rgba(255,105,180,0.12);
+animation:fadeUp 1s ease;
+}
+
+/* Shine Effect */
+
+.video-card::before{
+content:"";
+position:absolute;
+top:-150%;
+left:-50%;
+width:200%;
+height:300%;
+background:linear-gradient(
+120deg,
+transparent,
+rgba(255,255,255,0.15),
+transparent
+);
+transform:rotate(25deg);
+animation:shine 6s linear infinite;
+z-index:2;
+}
+
+@keyframes shine{
+0%{
+transform:translateX(-100%) rotate(25deg);
+}
+100%{
+transform:translateX(100%) rotate(25deg);
+}
+}
+
+video{
+width:100%;
+border-radius:22px;
+display:block;
+}
+
+/* ===== Message ===== */
+
+.message{
+margin-top:25px;
+font-size:15px;
+line-height:1.9;
+opacity:.9;
+padding:0 10px;
+}
+
+/* ===== Buttons ===== */
+
+.buttons{
+display:flex;
+gap:15px;
+margin-top:30px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:14px 24px;
+border:none;
+border-radius:18px;
+background:linear-gradient(135deg,#ff4d9d,#ff7eb3);
+color:white;
+font-size:15px;
+font-weight:600;
+cursor:pointer;
+transition:.4s;
+box-shadow:0 10px 25px rgba(255,105,180,.25);
+}
+
+.btn:hover{
+transform:translateY(-4px);
+}
+
+/* Extra Glow Button */
+
+.glow-btn{
+background:linear-gradient(135deg,#7c4dff,#9f7cff);
+box-shadow:
+0 0 20px rgba(124,77,255,.35);
+}
+
+/* ===== Animation ===== */
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* ===== Mobile Responsive ===== */
+
+@media(max-width:480px){
+
+.title{
+font-size:46px;
+}
+
+.subtitle{
+font-size:14px;
+}
+
+.message{
+font-size:14px;
+}
+
+.buttons{
+flex-direction:column;
+}
+
+.btn{
+width:100%;
+}
+
+.video-card{
+border-radius:25px;
+}
+
+video{
+border-radius:18px;
+}
+
+}
